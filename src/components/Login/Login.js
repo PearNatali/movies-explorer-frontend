@@ -1,37 +1,50 @@
 import { Link } from 'react-router-dom';
-import * as auth from '../../utils/auth.js';
-import Auth from '../Auth.js';
+import './Login.css';
+import logo from '../../images/logo.svg';
 
-const Login = ({handleLogin, handleLoginFail }) => {
-    const handleSubmit = (email, password) => {
-        if (!email || !password){
-            return;
-        }
-        auth.authorize(email, password)
-            .then((data) => {
-                if (data && data.token) {
-                    handleLogin();
-                } else {
-                    alert("Неверный логин или пароль")
-                }
-            })
-            .catch(err => {
-                handleLoginFail();
-                console.log(err);
-            });
-    }
+function Login() {
     return (
-        <Auth
-            onSubmit={handleSubmit}
-            title={'Вход'}
-            buttonText={'Войти'}
-        >
-            <div className="auth__option">
-                <p className="auth__option-title">Ещё не зарегистрированы?&nbsp;</p>
-                <Link to="/sign-up" className="auth__option-link">Зарегистрироваться</Link>
+        <section className="register">
+            <div className='register__logo'>
+                <Link to='/'>
+                    <img className='register__icon' src={logo} alt='логотип сайта' />
+                </Link>
             </div>
-        </Auth>
-    )
+            <h2 className='register__title'>Рады видеть!</h2>
+            <form className='register__form' name='login-form'>
+                <label htmlFor="register__email" className="register__label">E-mail</label>
+                <input
+                    className='register__input'
+                    name="email"
+                    type='text'
+                    id='login__email'
+                    required
+                    minLength={2}
+                    maxLength={40}
+                    placeholder='E-mail'
+                    pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$' />
+                <label htmlFor="register__password" className="register__label">Пароль</label>
+                <input
+                    className='register__input'
+                    name="password"
+                    type='password'
+                    id='login__password'
+                    required
+                    minLength={2}
+                    maxLength={40}
+                    placeholder='Пароль'
+                    pattern="[\w]{2,40}$"/>
+                <Link to='/profile' className='register__submit' type='submit'>
+                    Войти
+                </Link>
+            </form>
+            <p className='register__signin'>Ещё не зарегистрированы?
+                <Link to='/signup' className='register__link'>
+                    Регистрация
+                </Link>
+            </p>
+        </section>
+    );
 }
 
-export default Login
+export default Login;

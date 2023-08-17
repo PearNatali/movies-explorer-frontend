@@ -1,60 +1,32 @@
-import logo from '../images/logo.svg';
-import {useEffect, useState, useContext} from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import {CurrentUserContext} from "../contexts/CurrentUserContext";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './Header.css';
+import logo from '../../images/logo.svg';
+import MenuLink from '../MenuLink/MenuLink';
+import Container from '../Container/Container';
 
-function Header({email, onSignOut}) {
-    const [headerInfo, setHeaderInfo] = useState({});
-    const currentUser = useContext(CurrentUserContext);
-    const location = useLocation();
-
-    const handleLinkClick = () => {
-        if (location.pathname === '/main') {
-            onSignOut();
-        }
-    }
-
-    useEffect(() => {
-        let headerInfo = {};
-        if (location.pathname === '/main') {
-            headerInfo = {
-                email: currentUser.hasOwnProperty('email') && currentUser.email,
-                link: '/sign-in',
-                linkText: 'Выйти'
-            }
-        } else if (location.pathname === '/sign-up') {
-            headerInfo = {
-                email: '',
-                link: '/sign-in',
-                linkText: 'Войти'
-            }
-        } else if (location.pathname === '/sign-in') {
-            headerInfo = {
-                email: '',
-                link: '/sign-up',
-                linkText: 'Регистрация'
-            }
-        }
-        setHeaderInfo(headerInfo);
-    }, [location])
-
-    return (
-        <header className="header">
-            <div href="/" className="header__link-logo">
-                <img 
-                    src={logo} 
-                    alt="Логотип" 
-                    className="header__logo"/>
-            </div>
-            <div className="header__info">
-                <p className="header__email">{headerInfo.email}</p>
-                <Link 
-                    className="header__link" 
-                    to={headerInfo.link} 
-                    onClick={handleLinkClick}>{headerInfo.linkText}</Link>
-            </div>
-        </header>
-    )
+function Header(props) {
+  return (
+    <section className={`header ${props.class}`}>
+      <Container>
+        <div className='header__container'>
+          <Link to='/'>
+            <img className='header__logo' src={logo} alt='логотип сайта' /> 
+          </Link>
+          <div className='header__nav'>
+            <MenuLink
+              text='Регистрация'
+              route='/signup'
+              class='register' />
+              <MenuLink
+              text='Войти'
+              route='/signin'
+              class='login' />
+          </div>
+        </div>
+      </Container>
+    </section>
+  );
 }
 
-export default Header
+export default Header;

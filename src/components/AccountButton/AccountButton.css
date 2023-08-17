@@ -1,0 +1,29 @@
+.navigation__account-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    border: none;
+    background-color: #F9F9F9;
+    border-radius: 20px;
+    width: 100px;
+    height: 32px;
+    transition: opacity .3s ease-in-out;
+}
+.navigation__account-info_popup {
+    display: flex;
+}
+
+@media screen and (max-width: 770px) {
+    .navigation__account-info {
+        display: none;
+    }
+    .navigation__account-info_popup {
+        display: flex;
+    }
+}
