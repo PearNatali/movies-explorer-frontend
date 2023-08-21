@@ -10,15 +10,13 @@ import './Main.css';
 
 function Main() {
     return (
-        <section className='main'>
-            <Header/>
+        <main className='main'>
             <Promo />
             <AboutProject />
             <Techs />
             <AboutMe />
             <Portfolio/>
-            <Footer/>
-        </section>
+        </main>
     )
 }
 

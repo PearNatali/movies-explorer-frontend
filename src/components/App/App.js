@@ -5,21 +5,26 @@ import Main from "../Main/Main";
 import { Route, Routes } from "react-router-dom";
 import Profile from "../Profile/Profile";
 import Movies from "../Movies/Movies";
+import Layout from "../Layout/Layout";
 
 function App() {
   return (
     <div className="page">
       <Routes>
-        <Route path="/" element={
-          <Main/>
-        }/>
-        <Route path="/"/>
         <Route path="/signup" element={
-        <Register/>
+          <Register/>
         }/>
         <Route path="/signin" element={
           <Login/>
         }/>
+      </Routes>
+      <Routes>
+        <Route path="/" element={
+          <Layout>
+            <Main/>
+          </Layout>
+        }/>
+        <Route path="/"/>
         <Route path="/profile" element={
           <Profile/>
         }/>

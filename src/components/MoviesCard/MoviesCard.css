@@ -43,6 +43,7 @@
     z-index: 4;
 }
 .element__saved {
+    display: none;
     width: 30px;
     height: 30px;
     background-image: url(../../images/savedmovies.svg);
@@ -91,24 +92,43 @@
     display: none;
 }
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1200px) {
     .element{
         width: 339px;
         height: 258px;
     }
     .element__image{
         width: 339px;
-        height: 190px;
+        height: 195px;
     }
 }
-
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 900px) {
     .element{
-        width: 300px;
+        width: 320px;
+        height: 258px;
+    }
+    .element__image{
+        width: 320px;
+        height: 195px;
+    }
+}
+@media screen and (max-width: 720px) {
+    .element{
+        width: 310px;
         height: 236px;
     }
     .element__image{
-        width: 300px;
+        width: 310px;
+        height: 168px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .element{
+        width: 280px;
+        height: 236px;
+    }
+    .element__image{
+        width: 280px;
         height: 168px;
     }
 }

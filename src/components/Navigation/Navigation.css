@@ -16,6 +16,9 @@
 .register__logo {
     padding-right: 44px;
 }
+.register__logo:hover {
+    opacity: .6;
+}
 .navigation__container-movies {
     display: flex;
     justify-content: space-between;
@@ -64,6 +67,10 @@
     }
     .navigation__menu-burger{
         size: 44px;
+        cursor: pointer;
+    }
+    .navigation__menu:hover {
+        opacity: .6;
     }
 }
 @media screen and (max-width: 440px) {

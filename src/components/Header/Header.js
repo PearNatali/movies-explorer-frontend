@@ -7,7 +7,7 @@ import Container from '../Container/Container';
 
 function Header(props) {
   return (
-    <section className={`header ${props.class}`}>
+    <header className={`header ${props.class}`}>
       <Container>
         <div className='header__container'>
           <Link to='/'>
@@ -25,7 +25,7 @@ function Header(props) {
           </div>
         </div>
       </Container>
-    </section>
+    </header>
   );
 }
 

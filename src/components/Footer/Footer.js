@@ -6,7 +6,7 @@ function Footer() {
     const date = new Date();
     const year = date.getFullYear();
     return (
-        <section className="footer">
+        <footer className="footer">
             <Container>
                 <p className='footer__heading'>Учебный проект Яндекс.Практикум х BeatFilm.</p>
                 <div className='footer__copyright'>
@@ -29,7 +29,7 @@ function Footer() {
                     </div>
                 </div>
             </Container>
-        </section>
+        </footer>
     );
 }
 

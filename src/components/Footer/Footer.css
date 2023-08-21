@@ -16,11 +16,17 @@
     padding-bottom: 20px;
 }
 .footer__copyright {
+    font-family: 'Inter', Arial, sans-serif;
+    font-feature-settings: 'clig' off, 'liga' off;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     border-top: 1px #E8E8E8 solid;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 .footer__links {
     display: flex;
@@ -30,13 +36,16 @@
 .footer__text {
     color: #000;
     text-decoration: none;
-    transition: opacity .3s ease-in-out;
+    /* transition: opacity .3s ease-in-out; */
 }
 .footer__text:hover {
     opacity: .6;
 }
-.footer__text_year {
+.footer__text_year{
     color: #000;
+}
+.footer__text_year:hover {
+    opacity: 1;
 }
 @media screen and (max-width: 600px) {
     .footer__links {
@@ -49,6 +58,7 @@
     .footer__copyright {
         flex-direction: column-reverse;
         padding-top: 30px;
+        font-size: 12px;
     }
 }
 @media screen and (max-width: 360px) {
