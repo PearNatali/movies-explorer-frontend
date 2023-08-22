@@ -1,0 +1,116 @@
+.portfolio {
+    color: #000;
+    margin-bottom: 125px;
+}
+.portfolio__container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1280px;
+    padding: 0 70px;
+    margin: 0 auto;
+}
+.portfolio__projects {
+    gap: 20px;
+}
+.portfolio__heading {
+    color: #A0A0A0;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0;
+    margin-bottom: 50px;
+}
+.portfolio__project {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid #E8E8E8;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    transition: opacity .3s ease-in-out;
+    cursor: pointer;
+}
+.portfolio__project_border {
+    border-bottom: none;
+}
+.portfolio__project:hover {
+    opacity: .6;
+}
+.portfolio__project_title {
+    margin: 0;
+    margin-bottom: 19px;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px;
+    letter-spacing: -1.2px;
+}
+.portfolio__project_title_two {
+    margin-top: 19px;
+}
+.portfolio__project_title_three {
+    display: flex;
+    margin-bottom: 0;
+    align-items: flex-end;
+}
+.portfolio__projects_arrow {
+    margin: 0;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 60px;
+    letter-spacing: -1.2px;
+    display: flex;
+    align-items: flex-start;
+}
+.portfolio__projects_arrow_two {
+    display: flex;
+    align-items: center;
+}
+.portfolio__projects_arrow_three {
+    display: flex;
+    margin-bottom: 0;
+    align-items: flex-end;
+}
+@media screen and (max-width: 800px) {
+    .portfolio {
+        margin-bottom: 90px;
+    }
+    .portfolio__container {
+        padding: 0 50px;
+    }
+    .portfolio__project_title {
+        font-size: 28px;
+    }
+    .portfolio__projects_arrow {
+        font-size: 28px;
+        letter-spacing: -0.72px;
+    }
+    .portfolio__project_title_three {
+        margin-top: 19px;
+    }
+}
+@media screen and (max-width: 550px) {
+    .portfolio {
+        margin-bottom: 70px;
+    }
+    .portfolio__container {
+        padding: 0 14px;
+    }
+    .portfolio__heading {
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 40px;
+    }
+    .portfolio__project_title {
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: -0.72px;
+    }
+    .portfolio__projects_arrow {
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: -0.72px;
+    }
+}

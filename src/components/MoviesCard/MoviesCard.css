@@ -1,0 +1,134 @@
+.element{
+    box-sizing: border-box;
+    position: relative;
+    background: #FDFDFD;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.08);
+    width: 364px;
+    height: 271px;
+}
+.element__container {
+    display: flex;
+    flex-direction: column;
+}
+.element__data {
+    display: flex;
+    flex-direction: column;
+}
+.element__name {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: normal;
+    color: #000;
+    margin: 0;
+    margin-left: 14px;
+    padding-top: 14px;
+}
+.element__time {
+    margin: 0;
+    padding: 9px 0 14px 14px;
+}
+.element__image{
+    width: 364px;
+    height: 197px;
+    object-fit: cover;
+    grid-column: 1/3;
+    cursor: pointer;
+    z-index: 3;
+}
+.element__image:hover{
+    z-index: 0;
+}
+.element__button:hover{
+    cursor: pointer;
+    z-index: 4;
+}
+.element__saved {
+    display: none;
+    width: 30px;
+    height: 30px;
+    background-image: url(../../images/savedmovies.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 30px;
+    position: absolute;
+    top: 19px;
+    right: 14px;
+    z-index: 2;
+}
+.element__saved_active{
+    background-image: url(../../images/savedactive.svg);
+    border-color: transparent;
+    width: 30px;
+    height: 30px;
+    z-index: 4;
+}
+.element__saved_active:hover{
+    background-image: url(../../images/deletemovies.svg);
+}
+.element__delete{
+    background-image: url(../../images/deletemovies.svg);
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 19px;
+    right: 14px;
+    cursor: pointer;
+    transition: opacity .3s ease-in-out;
+    border: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+}
+.element__delete_active{
+    background-image: url(../../images/deletemovies.svg);
+    border-color: transparent;
+    width: 30px;
+    height: 30px;
+    z-index: 2;
+}
+.element__delete:hover {
+    opacity: .5;
+}
+.element__delete_none{
+    display: none;
+}
+
+@media screen and (max-width: 1200px) {
+    .element{
+        width: 339px;
+        height: 258px;
+    }
+    .element__image{
+        width: 339px;
+        height: 195px;
+    }
+}
+@media screen and (max-width: 900px) {
+    .element{
+        width: 320px;
+        height: 258px;
+    }
+    .element__image{
+        width: 320px;
+        height: 195px;
+    }
+}
+@media screen and (max-width: 720px) {
+    .element{
+        width: 310px;
+        height: 236px;
+    }
+    .element__image{
+        width: 310px;
+        height: 168px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .element{
+        width: 280px;
+        height: 236px;
+    }
+    .element__image{
+        width: 280px;
+        height: 168px;
+    }
+}
