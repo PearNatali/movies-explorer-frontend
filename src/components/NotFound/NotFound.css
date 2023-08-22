@@ -18,6 +18,8 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    margin: 0;
+    width: 100%;
 }
 .not-found__error-message{
     margin: 0;
@@ -43,6 +45,8 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    display: flex;
+    justify-content: center;
 }
 .not-found__back:hover {
     opacity: .6;
@@ -51,25 +55,36 @@
     .not-found{
         padding-top: 408px;
     }
+    .not-found__error{
+        font-size: 125px;
+    }
     .not-found__error-message{
         margin-bottom: 222px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .not-found{
+        padding-top: 329px;
+    }
+    .not-found__error{
+        font-size: 100px;
     }
 }
 @media screen and (max-width: 400px) {
     .not-found{
         padding-top: 329px;
+        padding-bottom: 30px;
     }
     .not-found__error{
         font-size: 80px;
-        width: 100%;
     }
     .not-found__error-message{
         font-size: 12px;
         margin: 0;
+        margin-bottom: 284px;
     }
     .not-found__error-container{
         gap: 10px;
-        margin-bottom: 30px;
     }
     .not-found__back{
         font-size: 12px;

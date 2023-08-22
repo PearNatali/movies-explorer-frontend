@@ -6,6 +6,7 @@ import { Route, Routes } from "react-router-dom";
 import Profile from "../Profile/Profile";
 import Movies from "../Movies/Movies";
 import Layout from "../Layout/Layout";
+import NotFound from "../NotFound/NotFound";
 
 function App() {
   return (
@@ -33,6 +34,9 @@ function App() {
         }/>
         <Route path="/saved-movies" element={
           <Movies/>
+        }/>
+        <Route path="/not-found" element={
+          <NotFound/>
         }/>
       </Routes>
     </div>
